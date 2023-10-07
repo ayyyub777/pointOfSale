@@ -2,7 +2,7 @@ import { styled } from "styled-components";
 import Heading from "../ui/typography/Heading";
 import Body from "../ui/typography/Body";
 import Navigation from "../components/Navigation";
-import DropDown from "../components/Dropdown";
+import Select from "../components/Select";
 import DishCard from "../components/DishCard";
 import OrderItem from "../components/OrderItem";
 import Tab from "../ui/Tab";
@@ -17,13 +17,18 @@ const Grid = styled.div`
 const Main = styled.main`
   margin: 0 auto;
   width: 39.5625rem;
-  padding: 1.5rem;
+  padding: 0 1.5rem 1.5rem;
 `;
 
 const Header = styled.header`
   display: flex;
   flex-direction: column;
+  padding-top: 1.5rem;
   gap: 1.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  background-color: var(--color-base-dark-bg-1);
 `;
 
 const Title = styled.div`
@@ -134,7 +139,7 @@ export default function Home() {
         <Container>
           <PageTitle>
             <Heading as="h2">Choose Dishes</Heading>
-            <DropDown />
+            <Select />
           </PageTitle>
           <Cards>
             <DishCard />
