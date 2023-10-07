@@ -32,15 +32,18 @@ const Details = styled.div`
   margin-top: 0.5rem;
 `;
 
-export default function DishCard() {
+export default function DishCard({ item }) {
+  const { name, price, available, image } = item;
   return (
     <Container>
-      <Img src="public/img1.jpg" />
+      <Img src={image} />
       <Text>
-        <Body weight="medium">Spicy seasoned seafood noodles</Body>
+        <Body weight="medium">{name}</Body>
         <Details>
-          <Body>$2.29</Body>
-          <Body $color="var(--color-text-light)">20 Bowls available</Body>
+          <Body>{price}</Body>
+          <Body $color="var(--color-text-light)">
+            {available} Bowls available
+          </Body>
         </Details>
       </Text>
     </Container>

@@ -1,4 +1,5 @@
 import { styled } from "styled-components";
+import { useEffect, useState } from "react";
 import Heading from "../ui/typography/Heading";
 import Body from "../ui/typography/Body";
 import Navigation from "../components/Navigation";
@@ -7,6 +8,7 @@ import DishCard from "../components/DishCard";
 import OrderItem from "../components/OrderItem";
 import Tab from "../ui/Tab";
 import Button from "../ui/Button";
+import useMenu from "../hooks/useMenu";
 
 const Grid = styled.div`
   display: grid;
@@ -126,6 +128,8 @@ const Row = styled.div`
 `;
 
 export default function Home() {
+  const { menu } = useMenu();
+
   return (
     <Grid>
       <Main>
@@ -142,15 +146,9 @@ export default function Home() {
             <Select />
           </PageTitle>
           <Cards>
-            <DishCard />
-            <DishCard />
-            <DishCard />
-            <DishCard />
-            <DishCard />
-            <DishCard />
-            <DishCard />
-            <DishCard />
-            <DishCard />
+            {menu.map((item) => (
+              <DishCard key={item.id} item={item} />
+            ))}
           </Cards>
         </Container>
       </Main>

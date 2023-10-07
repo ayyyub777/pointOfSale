@@ -1,0 +1,11 @@
+{
+    "menu" : [
+        {"id": 1, "name" : "Spicy seasoned seafood noodles", "price" : 2.29, "available" : 20, "image" : "public/images/Image 1.png"},
+        {"id": 2, "name" : "Salted Pasta with mushroom sauce", "price" : 2.69, "available" : 11, "image" : "public/images/Image 2.png"},
+        {"id": 3, "name" : "Beef dumpling in hot and sour soup", "price" : 2.99, "available" : 16, "image" : "public/images/Image 3.png"},
+        {"id": 4, "name" : "Healthy noodle with spinach leaf", "price" : 3.29, "available" : 22, "image" : "public/images/Image 4.png"},
+        {"id": 5, "name" : "Hot spicy fried rice with omelet", "price" : 3.49, "available" : 13, "image" : "public/images/Image 5.png"},
+        {"id": 6, "name" : "Spicy instant noodle with special omelette", "price" : 3.59, "available" : 17, "image" : "public/images/Image 6.png"},
+        {"id": 7, "name" : "Hot spicy fried rice with omelet", "price" : 3.49, "available" : 13, "image" : "public/images/Image 8.png"}
+    ]
+}
